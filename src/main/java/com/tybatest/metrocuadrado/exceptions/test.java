@@ -1,5 +1,3 @@
 package com.tybatest.metrocuadrado.exceptions;
 
-public class test {
-
-}
+public class test {}

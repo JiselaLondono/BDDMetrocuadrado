@@ -1,5 +1,3 @@
 package com.tybatest.metrocuadrado.tasks;
 
-public class test {
-
-}
+public class test {}
