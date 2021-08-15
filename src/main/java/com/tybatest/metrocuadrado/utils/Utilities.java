@@ -18,4 +18,8 @@ public final class Utilities {
     }
     return new String(array);
   }
+
+  public static Integer removeCharactersToValue(String value) {
+    return Integer.parseInt(value.replaceAll("[$ ,]", ""));
+  }
 }
