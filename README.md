@@ -71,7 +71,7 @@ La estructura completa del proyecto es la siguiente:
 Tener instalado y configurado el funcionamiento de lo siguiente:
 
 + Java JDK 1.8 (variables de entorno configuradas)
-+ IDE de desarrollo, preferiblemente Intellij IDEA Community Edition v2018.3.4 o superior.
++ IDE de desarrollo, preferiblemente Intellij IDEA Community Edition v2020.3.1 o superior.
   + En el IDE tener instalado el plugin Cucumber for Java y Gherkin
 + Gradle v6.6 o superior (variables de entorno configuradas)
 + Git
