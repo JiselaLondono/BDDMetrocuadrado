@@ -5,19 +5,21 @@ import static com.tybatest.metrocuadrado.userinterfaces.CreditCalculator.MONTHLY
 import static com.tybatest.metrocuadrado.userinterfaces.CreditCalculator.TERM_IN_YEARS;
 import static com.tybatest.metrocuadrado.utils.Constants.FULL_TERM_OPTION;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 
-public class AddCreditCalculationInformation implements Task {
+public class AddDataForLoanCalculation implements Task {
 
   private int monthlyIncome;
   private int term;
 
-  public AddCreditCalculationInformation(int monthlyIncome, int term) {
+  public AddDataForLoanCalculation(int monthlyIncome, int term) {
     this.monthlyIncome = monthlyIncome;
     this.term = term;
   }
@@ -27,10 +29,11 @@ public class AddCreditCalculationInformation implements Task {
     actor.attemptsTo(
         Enter.theValue(String.valueOf(monthlyIncome)).into(MONTHLY_INCOME),
         SelectFromOptions.byVisibleText(String.format(FULL_TERM_OPTION, term)).from(TERM_IN_YEARS),
+        WaitUntil.the(CALCULATE_CREDIT_BUTTON, isEnabled()),
         Click.on(CALCULATE_CREDIT_BUTTON));
   }
 
-  public static AddCreditCalculationInformation withTheFollowingData(int monthlyIncome, int term) {
-    return instrumented(AddCreditCalculationInformation.class, monthlyIncome, term);
+  public static AddDataForLoanCalculation asTheFollowing(int monthlyIncome, int term) {
+    return instrumented(AddDataForLoanCalculation.class, monthlyIncome, term);
   }
 }

@@ -25,11 +25,6 @@ public class ChooseCalculationType implements Task {
         Check.whether(replaceAccents(calculationType).equals(LOAN))
             .andIfSo(Click.on(CALCULATOR_TYPE.of(LOAN)))
             .otherwise(Click.on(CALCULATOR_TYPE.of(FEES))));
-    try {
-      Thread.sleep(5000);
-    } catch (InterruptedException e) {
-      e.printStackTrace();
-    }
   }
 
   public static ChooseCalculationType toSimulateCreditWith(String calculationType) {

@@ -22,8 +22,7 @@ public class SelectMenuOption implements Interaction {
     actor.attemptsTo(
         Click.on(MENU_OPTION.of(menuOption)),
         Click.on(SUBMENU_OPTION.of(menuOption, submenuOption)),
-        OpenNextTab.inBrowser()
-        /*Switch.toWindow(TITLE)*/ );
+        OpenNextTab.inBrowser());
   }
 
   public static SelectMenuOption named(String menuOption) {

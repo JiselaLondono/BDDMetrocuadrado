@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-    features = "src/test/resources/features/home_credit_loan_calculation.feature",
+    features =
+        "src/test/resources/features/monthly_fee_calculation/monthly_fee_calculation_for_credit.feature",
     glue = "com.tybatest.metrocuadrado.stepdefinitions",
     snippets = CucumberOptions.SnippetType.CAMELCASE)
-public class HomeCreditLoanCalculationRunner {}
+public class MonthlyFeeCalculationForCreditRunner {}
