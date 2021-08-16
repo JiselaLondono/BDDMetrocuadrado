@@ -7,17 +7,17 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
-public class LoanValue implements Question<Integer> {
+public class CalculatedMonthlyFeeValue implements Question<Integer> {
 
-  private static final String LOAN_TABLE_ITEM = "3";
+  private static final String FEE_TABLE_ITEM = "2";
 
   @Override
   public Integer answeredBy(Actor actor) {
     return removeCharactersToValue(
-        Text.of(VALUE_BY_FEEL.of(LOAN_TABLE_ITEM)).viewedBy(actor).asString());
+        Text.of(VALUE_BY_FEEL.of(FEE_TABLE_ITEM)).viewedBy(actor).asString());
   }
 
-  public static LoanValue is() {
-    return new LoanValue();
+  public static CalculatedMonthlyFeeValue is() {
+    return new CalculatedMonthlyFeeValue();
   }
 }

@@ -22,4 +22,6 @@ public final class CreditCalculator {
   public static final Target CALCULATE_FEES_BUTTON =
       Target.the("Button to calculate fees information")
           .locatedBy("//button/h4[text()='Calcular Cuotas']");
+
+  private CreditCalculator() {}
 }
